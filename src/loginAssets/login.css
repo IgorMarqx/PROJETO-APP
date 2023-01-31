@@ -49,6 +49,23 @@ body {
     gap: 1rem;
 }
 
+@media (max-width: 780px) {
+    .topper {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+    }
+    .topper h1 {
+        display: none;
+    }
+}
+
+@media (max-width: 280px) {
+    .topper h1 {
+        font-size: 1.8rem;
+    }
+}
+
 .formulario {
     width: 25rem;
     /* border: 1px solid red; */
@@ -82,7 +99,7 @@ body {
 }
 
 .error {
-    display: none;
+    /* display: none; */
     font-size: .95rem;
     color: var(--error);
 }

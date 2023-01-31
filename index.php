@@ -1,5 +1,6 @@
 <?php
 include_once('./controllers/config.php');
+session_start();
 ?>
 
 
@@ -26,7 +27,7 @@ include_once('./controllers/config.php');
 
 <body>
     <div class="top">
-        <div class="container">
+        <div class="container topper">
             <img class="logo" src="./imgs/audaLogo.png" alt="">
             <h1>Auda administrações</h1>
         </div>
@@ -39,9 +40,17 @@ include_once('./controllers/config.php');
                 </div>
                 <form action="./controllers/login/login.php" method="POST">
                     <label class="us" for="user">Usuario <span>*</span></label>
-                    <div class="error">
-                        <span><i class="fa-solid fa-triangle-exclamation"></i>Usuario ou senha inválidos, contate o <a href="">administrador(a)</a></span>
-                    </div>
+                    <?php
+                    if (isset($_SESSION['error'])) :
+                    ?>
+                        <div class="error">
+                            <span><i class="fa-solid fa-triangle-exclamation"></i>Usuario ou senha inválidos, contate o <a href="">administrador(a)</a></span>
+                        </div>
+                    <?php
+                    endif;
+                    unset($_SESSION['error']);
+                    ?>
+
                     <input name="user" type="text" id="user" class="form-control" autofocus placeholder="Insira seu usuário">
 
                     <label class="us" for="pass">Senha <span>*</span></label>

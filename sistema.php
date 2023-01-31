@@ -20,7 +20,8 @@ if ((!isset($_SESSION['user']) == true) and (!isset($_SESSION['password']) == tr
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!-- FOLHA CSS -->
-    <link rel="stylesheet" href="./src/sistema.css">
+    <link rel="stylesheet" href="./src/systemAssets/sistema.css">
+    <link rel="stylesheet" href="./src/systemAssets/responsiveSystem.css">
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,9 +32,58 @@ if ((!isset($_SESSION['user']) == true) and (!isset($_SESSION['password']) == tr
 </head>
 
 <body>
-    <h1>Olá <?php echo "$logado";?></h1>
-    <a class="btn btn-danger" href="./controllers/login/logout.php">Sair</a>
+    <header>
+        <div class="containe">
+            <div class="container-child">
+                <div class="logo">
+                    <h1>AUDA - Administração de condominios</h1>
+                </div>
 
+                <div class="dropdown">
+                    <button class="btns" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#"></a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-bell"></i> Notificações </a></li>
+                        <li><a class="dropdown-item" href="./controllers/login/logout.php"><i class="fa-sharp fa-solid fa-right-from-bracket"></i> Sair</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="left-border">
+            <div class="itens">
+                <div class="helloUser">
+                    <i class="fa-solid fa-user"></i>
+                    <h2><?php echo strtoupper("OLÁ $logado"); ?></h2>
+
+                </div>
+
+                <div class="GM">
+                    <a href="">Cadastrar Usuários</a>
+                </div>
+
+                <hr>
+
+                <div class="options">
+                    <nav class="nav flex-column">
+                        <a class="nav-link active" aria-current="page" href="#"><img src="./imgs/buildings.svg" alt=""> Meus Condominios</a>
+                        <a class="nav-link" href="#"><img src="./imgs/plus-square-fill.svg" alt=""> Adicionar condominios</a>
+                        <a class="nav-link" href="#"><img src="./imgs/paperclip.svg" alt="">Link</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="teste">
+            <h1>TESTE</h1>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 
 </html>

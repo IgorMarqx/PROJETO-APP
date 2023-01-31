@@ -13,8 +13,8 @@ if (isset($_POST['submit']) && !empty($_POST['user']) && !empty($_POST['password
 
     $resultado = $conexao->query($sql);
 
-
-    if (mysqli_num_rows($resultado) < 1) {
+    if (mysqli_num_rows($resultado) < 1 ) {
+        $_SESSION['error'] = true;
         unset($_SESSION['user']);
         unset($_SESSION['password']);
         header('Location:  ../../index.php');
