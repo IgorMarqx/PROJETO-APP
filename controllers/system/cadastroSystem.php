@@ -1,0 +1,49 @@
+<?php
+session_start();
+    $logado = $_SESSION['user'];
+?>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- FOLHA CSS -->
+    <link rel="stylesheet" href="../../src/systemAssets/sistema.css">
+    <link rel="stylesheet" href="../../src/systemAssets/responsiveSystem.css">
+    <link rel="stylesheet" href="../../src/registerAssets/register.css">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Controle condominal</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</head>
+
+<?php
+include_once('../../views/header.php');
+// include_once('../../views/main.php');
+?>
+
+<div class="back" style="background-color: #E0E0E0;">
+    <a class="btn btn-danger" href="../../sistema.php">Voltar</a>
+</div>
+<div class="main">
+    <div class="register">
+        <div class="form">
+            <form action="" method="POST">
+                <label for="user">Usuário <span>*</span></label>
+                <input id="user" class="form-control" type="text" placeholder="Informe o nome do usuário">
+    
+                <label for="pass">Senha <span>*</span></label>
+                <input id="pass" class="form-control" type="password" placeholder="Informe a senha ">
+
+                <div class="bt mt-3">
+                    <input class="btn btn-success" type="submit" value="Cadastrar">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

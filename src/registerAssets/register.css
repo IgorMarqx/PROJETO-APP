@@ -1,0 +1,27 @@
+:root {
+    --primary-color: #953779;
+    --default: #fff;
+    --hover: #3C3C3C;
+    --error: #ff0000;
+}
+
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.form {
+    width: 20%;
+    border: 1px solid red;
+}
+
+.bt {
+    display: flex;
+    flex-direction: column;
+}
+
+span {
+    color: var(--error);
+}

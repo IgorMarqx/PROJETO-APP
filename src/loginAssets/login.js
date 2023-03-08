@@ -8,6 +8,7 @@ const error = document.querySelector('.error')
 function validateError() {
     // validação de erro
     btnSubmit.addEventListener('click', (e) => {
+
         if (user.value == '' && pass.value == '') {
             error.style.display = 'flex'
             user.style.border = '1px solid red'
